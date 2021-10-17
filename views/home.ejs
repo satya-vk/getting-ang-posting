@@ -1,0 +1,14 @@
+<%- include("partial/header") -%>
+<h1>Home</h1>
+<p><%= data %></p>
+<% posts.forEach(function(elements){ %>
+  <h1><%= elements.head %></h1>
+<% var length=100; %>
+<% var myString= elements.poster %>
+<% var trunCateString=myString.substring(0,length);%>
+   <p><%= trunCateString+" ....." %><a href="/postss/:<%=elements.head%>">Readmore</a></p>
+<% }); %>
+
+
+
+<%- include("partial/footer") -%>
